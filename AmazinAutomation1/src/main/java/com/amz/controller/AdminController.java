@@ -3,9 +3,7 @@ package com.amz.controller;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
-import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,12 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.amz.entity.BustedDetail;
 import com.amz.entity.FlyashMaster;
-import com.amz.entity.LoaderMaster;
 import com.amz.entity.PackerMaster;
-import com.amz.entity.PlantMaster;
-import com.amz.entity.UserDetails;
 import com.amz.entity.VerifiedBustedBags;
-import com.amz.entity.userRoleMaster;
+import com.amz.factory.entity.UserDetail;
 import com.amz.gen.ServiceContainer;
 import com.amz.services.AdminService;
 import com.google.gson.Gson;
@@ -33,9 +28,9 @@ public class AdminController
 	AdminService adminService;
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/login", method = RequestMethod.POST, headers = "Accept=application/json",consumes = {"application/json"})
-	public String login(@RequestBody UserDetails userDetails,HttpServletRequest request) 
+	public String login(@RequestBody UserDetail userDetails,HttpServletRequest request) 
 	{
-		List<UserDetails> list= adminService.login(userDetails);
+		List<UserDetail> list= adminService.login(userDetails);
 		ServiceContainer serviceContainer = new ServiceContainer(); 
 		if(list.size()>0)
 		{
@@ -73,7 +68,7 @@ public class AdminController
 
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/changePassword", method = RequestMethod.POST, headers = "Accept=application/json",consumes = {"application/json"})
-	public String changepassword(@RequestBody UserDetails users) 
+	public String changepassword(@RequestBody UserDetail users) 
 	{
 		adminService.changePassword(users);
 
@@ -90,7 +85,7 @@ public class AdminController
 	
 	 @CrossOrigin(origins = "*")
 	  	@RequestMapping(value = "/createUser", method = RequestMethod.POST, headers = "Accept=application/json",consumes = {"application/json"})
-	  	public String createUser (@RequestBody UserDetails userDetails) 
+	  	public String createUser (@RequestBody UserDetail userDetails) 
 	  	{
 	    	String result=adminService.createUser(userDetails);
 	    	

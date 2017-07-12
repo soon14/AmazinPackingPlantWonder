@@ -1,7 +1,7 @@
 package com.amz.controller;
 
 import java.util.ArrayList;
-import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.amz.entity.DeviceMaster;
 import com.amz.entity.DeviceTypeMaster;
 import com.amz.entity.DeviceTypeQty;
-import com.amz.entity.UserDetails;
 import com.amz.gen.ServiceContainer;
 import com.amz.services.DeviceService;
 import com.google.gson.Gson;

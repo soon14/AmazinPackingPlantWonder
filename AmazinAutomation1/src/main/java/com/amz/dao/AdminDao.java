@@ -1,32 +1,22 @@
 package com.amz.dao;
 
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
-
-import javax.servlet.http.HttpSession;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.servlet.handler.UserRoleAuthorizationInterceptor;
 
 import com.amz.entity.BustedDetail;
-import com.amz.entity.DiMaster;
 import com.amz.entity.FlyashMaster;
-import com.amz.entity.LoaderMaster;
 import com.amz.entity.PackerMaster;
-import com.amz.entity.PlantMaster;
 import com.amz.entity.ReusabelBagsMaster;
-import com.amz.entity.UserDetails;
 import com.amz.entity.VerifiedBustedBags;
 import com.amz.entity.userRoleMaster;
-
+import com.amz.factory.entity.UserDetail;
 import com.amz.gen.AmazinUrl;
-import com.fasterxml.jackson.databind.cfg.BaseSettings;
 @Repository
 public class AdminDao
 {
@@ -39,40 +29,40 @@ public class AdminDao
 	}
 
 
-	public List<UserDetails> login(UserDetails user) 
+	public List<UserDetail> login(UserDetail user) 
 	{
 		
-		String hqlQueryString = "FROM UserDetails users WHERE users.username = :user and users.userPassword=:pass";
+		String hqlQueryString = "FROM UserDetail users WHERE users.username = :user and users.userPassword=:pass";
 		Session session =this.sessionFactory.getCurrentSession();
 		Query query = session.createQuery(hqlQueryString);
 		query.setParameter("user",user.getUsername());
-		query.setParameter("pass",user.getuserPassword());
-		List<UserDetails> userList = query.list();
+		query.setParameter("pass",user.getPassword());
+		List<UserDetail> userList = query.list();
 		if(userList.size()>0)
 		{
 		AmazinUrl.usertype=userList.get(0).getUsername();
 		System.out.println(AmazinUrl.usertype);
 		}return userList;
 	}
-	public UserDetails logout(UserDetails user) 
+	public UserDetail logout(UserDetail user) 
 	{
 		Session session = this.sessionFactory.getCurrentSession();
 		
 		return user;
 	}
-	public int  changePassword(UserDetails user) 
+	public int  changePassword(UserDetail user) 
 	{
-		String hqlQueryString = "UPDATE UserDetails users SET users.userPassword = :pass Where users.username=:user";
+		String hqlQueryString = "UPDATE UserDetail users SET users.userPassword = :pass Where users.username=:user";
 		Session session =this.sessionFactory.getCurrentSession();
 		Query query = session.createQuery(hqlQueryString);
 		query.setParameter("user",user.getUsername());
-		query.setParameter("pass",user.getuserPassword());
+		query.setParameter("pass",user.getPassword());
 		int result = query.executeUpdate();
 		
 		return result;
 	}
 
-	public String  createUser(UserDetails user) 
+	public String  createUser(UserDetail user) 
 	{
 
 		Session session =this.sessionFactory.getCurrentSession();

@@ -3,8 +3,6 @@ package com.amz.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,13 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.amz.entity.BustedDetail;
-import com.amz.entity.DeviceMaster;
-import com.amz.entity.DeviceTypeMaster;
-import com.amz.entity.DeviceTypeQty;
 import com.amz.entity.DiMaster;
 import com.amz.entity.TripCreation;
 import com.amz.entity.TripMaster;
-import com.amz.entity.UserDetails;
 @Repository
 public class TripCreationDao
 {

@@ -1,7 +1,6 @@
 package com.amz.services;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.transaction.Transactional;
 
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Service;
 import com.amz.dao.TripCreationDao;
 import com.amz.entity.TripCreation;
 import com.amz.entity.TripMaster;
-import com.amz.entity.UserDetails;
 
 
 @Service("tripCreationService")

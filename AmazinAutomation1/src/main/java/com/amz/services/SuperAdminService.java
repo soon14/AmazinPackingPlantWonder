@@ -8,20 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.amz.bean.PlantWiseDeviceMaster;
-import com.amz.dao.AdminDao;
 import com.amz.dao.SuperAdminDao;
-import com.amz.entity.BustedDetail;
-import com.amz.entity.DiMaster;
-import com.amz.entity.FlyashMaster;
-import com.amz.entity.LoaderMaster;
-import com.amz.entity.PackerMaster;
 import com.amz.entity.PlantMaster;
 import com.amz.entity.StageMaster;
-import com.amz.entity.UserDetails;
-import com.amz.entity.userRoleMaster;
-import com.amz.entity.VerifiedBustedBags;
-
-import javassist.Loader;
 
 
 @Service("superAdminService")

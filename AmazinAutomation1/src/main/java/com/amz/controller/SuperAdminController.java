@@ -1,12 +1,5 @@
 package com.amz.controller;
 
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.json.JSONObject;
-import org.omg.CORBA.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,17 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.amz.entity.BustedDetail;
-import com.amz.entity.FlyashMaster;
-import com.amz.entity.LoaderMaster;
-import com.amz.entity.PackerMaster;
 import com.amz.entity.PlantMaster;
 import com.amz.entity.StageMaster;
-import com.amz.entity.UserDetails;
-import com.amz.entity.VerifiedBustedBags;
-import com.amz.entity.userRoleMaster;
 import com.amz.gen.ServiceContainer;
-import com.amz.services.AdminService;
 import com.amz.services.SuperAdminService;
 import com.google.gson.Gson;
 

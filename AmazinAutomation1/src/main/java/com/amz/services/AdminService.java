@@ -9,16 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.amz.dao.AdminDao;
 import com.amz.entity.BustedDetail;
-import com.amz.entity.DiMaster;
 import com.amz.entity.FlyashMaster;
-import com.amz.entity.LoaderMaster;
 import com.amz.entity.PackerMaster;
-import com.amz.entity.PlantMaster;
-import com.amz.entity.UserDetails;
-import com.amz.entity.userRoleMaster;
 import com.amz.entity.VerifiedBustedBags;
-
-import javassist.Loader;
+import com.amz.entity.userRoleMaster;
+import com.amz.factory.entity.UserDetail;
 
 
 @Service("adminService")
@@ -29,24 +24,24 @@ public class AdminService
 	@Autowired
 	AdminDao adminDao;
 	@Transactional
-	public List<UserDetails>login (UserDetails userdetails) 
+	public List<UserDetail>login (UserDetail userdetails) 
 	{
 		return adminDao.login(userdetails);
 	}
 	
 
 	@Transactional
-	public void logout(UserDetails userdetails) 
+	public void logout(UserDetail userdetails) 
 	{
 		adminDao.logout(userdetails);
 	}
 	@Transactional
-	public void changePassword(UserDetails userdetails) 
+	public void changePassword(UserDetail userdetails) 
 	{
 		adminDao.changePassword(userdetails);
 	}
 	@Transactional
-	public String  createUser(UserDetails userdetails) 
+	public String  createUser(UserDetail userdetails) 
 	{
 		return adminDao.createUser(userdetails);
 	}

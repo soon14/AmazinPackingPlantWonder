@@ -1,114 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<beans:beans xmlns="http://www.springframework.org/schema/mvc"  
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"  
- xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"  
- xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd  
   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
-  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">  
-  
- <annotation-driven />  
- <resources mapping="/resources/**" location="/resources/" />  
-  <!--   <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3306/tracking" />  
-  <beans:property name="username" value="root" />  
-  <beans:property name="password" value="root" />  
- </beans:bean>  -->
- 
+  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
-    <!--  <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3306/amazinvt_track" />  
-  <beans:property name="username" value="amazinvt_track" />  
-  <beans:property name="password" value="amazin@1234" />  
- </beans:bean> -->
- 
-  <!-- 
-   <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3306/amazinvt_amazin?zeroDateTimeBehavior=convertToNull" />  
-  <beans:property name="username" value="amazinvt_amazin" />  
-  <beans:property name="password" value="vts123" />  
- </beans:bean> --> 
- <!-- 
-  <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3306/amazinvt_amazin?zeroDateTimeBehavior=convertToNull" />  
-  <beans:property name="username" value="amazinvt_amazin" />  
-  <beans:property name="password" value="vts123" />  
- </beans:bean>  -->
- 
- 
-<!--    <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://35.189.165.109:3306/plms_db?zeroDateTimeBehavior=convertToNull" />  
-  <beans:property name="username" value="connect" />  
-  <beans:property name="password" value="connectamazin4321" />  
- </beans:bean> -->  
+	<annotation-driven />
+	<resources mapping="/resources/**" location="/resources/" />
 
- 
-   <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3307/plms_db?zeroDateTimeBehavior=convertToNull" />  
-  <beans:property name="username" value="root" />  
-  <beans:property name="password" value="root" />  
- </beans:bean>  
- 
- 
-  <!--   <beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
-  <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />  
-  <beans:property name="url" value="jdbc:mysql://localhost:3306/amazinvt_vtsdb" />  
-  <beans:property name="username" value="root" />  
-  <beans:property name="password" value="root" />  
- </beans:bean> -->
- 
- 
- 
- 
- 
-  
- <!-- Hibernate 4 SessionFactory Bean definition -->  
- <beans:bean id="hibernate4AnnotatedSessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">  
-  <beans:property name="dataSource" ref="dataSource" />  
-  <beans:property name="annotatedClasses">  
-   <beans:list>  
-    <beans:value>com.amz.entity.AllocationModeMaster</beans:value>
-	<beans:value>com.amz.entity.UserDetails</beans:value>
-	<beans:value>com.amz.entity.TripCreation</beans:value>
-	<beans:value>com.amz.entity.DeviceTypeMaster</beans:value>
-	<beans:value>com.amz.entity.DeviceMaster</beans:value>
-	<beans:value>com.amz.entity.DeviceTypeQty</beans:value>
-	<beans:value>com.amz.entity.PrinterFormat</beans:value>
-	<beans:value>com.amz.entity.LastPrintedCommand</beans:value>
-	<beans:value>com.amz.entity.PackerMaster</beans:value>
-	<beans:value>com.amz.entity.LoaderMaster</beans:value>
-	<beans:value>com.amz.entity.PlantMaster</beans:value>
-	<beans:value>com.amz.entity.userRoleMaster</beans:value>
-	<beans:value>com.amz.entity.BustedDetail</beans:value>
-	<beans:value>com.amz.entity.DiMaster</beans:value>
-	<beans:value>com.amz.entity.TripMaster</beans:value>
-	<beans:value>com.amz.entity.FlyashMaster</beans:value>
-	<beans:value>com.amz.entity.SalesChannelMaster</beans:value>
-	<beans:value>com.amz.entity.ProductMaster</beans:value>
-	<beans:value>com.amz.entity.ReusabelBagsMaster</beans:value>
-	<beans:value>com.amz.entity.VerifiedBustedBags</beans:value>
-	<beans:value>com.amz.entity.StageMaster</beans:value>
-      
-      
-    
-   </beans:list>  
-  </beans:property>  
-  <beans:property name="hibernateProperties">  
-   <beans:props>  
-    <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect  
-    </beans:prop>  
-    <beans:prop key="hibernate.show_sql">true</beans:prop>  
-   </beans:props>  
-  </beans:property>  
- </beans:bean>  
-   
-   	<beans:bean
+	<beans:bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<beans:property name="url"
+			value="jdbc:mysql://35.189.165.109:3306/plms?zeroDateTimeBehavior=convertToNull" />
+		<beans:property name="username" value="connect" />
+		<beans:property name="password" value="connectamazin4321" />
+	</beans:bean>
+
+
+
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<beans:bean id="hibernate4AnnotatedSessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="annotatedClasses">
+			<beans:list>
+				<beans:value>com.amz.entity.AllocationModeMaster</beans:value>
+				<!-- <beans:value>com.amz.entity.UserDetails</beans:value> -->
+				<beans:value>com.amz.entity.TripCreation</beans:value>
+				<beans:value>com.amz.entity.DeviceTypeMaster</beans:value>
+				<beans:value>com.amz.entity.DeviceMaster</beans:value>
+				<beans:value>com.amz.entity.DeviceTypeQty</beans:value>
+				<beans:value>com.amz.entity.PrinterFormat</beans:value>
+				<beans:value>com.amz.entity.LastPrintedCommand</beans:value>
+				<beans:value>com.amz.entity.PackerMaster</beans:value>
+				<beans:value>com.amz.entity.LoaderMaster</beans:value>
+				<beans:value>com.amz.entity.PlantMaster</beans:value>
+				<beans:value>com.amz.entity.userRoleMaster</beans:value>
+				<beans:value>com.amz.entity.BustedDetail</beans:value>
+				<beans:value>com.amz.entity.DiMaster</beans:value>
+				<beans:value>com.amz.entity.TripMaster</beans:value>
+				<beans:value>com.amz.entity.FlyashMaster</beans:value>
+				<beans:value>com.amz.entity.SalesChannelMaster</beans:value>
+				<beans:value>com.amz.entity.ProductMaster</beans:value>
+				<beans:value>com.amz.entity.ReusabelBagsMaster</beans:value>
+				<beans:value>com.amz.entity.VerifiedBustedBags</beans:value>
+				<beans:value>com.amz.entity.StageMaster</beans:value>
+
+
+				<!-- New DB Entity -->
+
+				<beans:value>com.amz.factory.entity.AdmSuper</beans:value>
+				<beans:value>com.amz.factory.entity.ConfigBidding</beans:value>
+				<beans:value>com.amz.factory.entity.ConfigSystemvar</beans:value>
+				<beans:value>com.amz.factory.entity.DriverDetail</beans:value>
+				<beans:value>com.amz.factory.entity.MapClubdestination</beans:value>
+				<beans:value>com.amz.factory.entity.MapDesTrptrQty</beans:value>
+				<beans:value>com.amz.factory.entity.MapDischargedSide</beans:value>
+				<beans:value>com.amz.factory.entity.MapDischargedsideLoader</beans:value>
+				<beans:value>com.amz.factory.entity.MapDistrictCity</beans:value>
+				<beans:value>com.amz.factory.entity.MapLoaderCapacity</beans:value>
+				<beans:value>com.amz.factory.entity.MapLoaderdevice</beans:value>
+				<beans:value>com.amz.factory.entity.MapPackerAndProduct</beans:value>
+				<beans:value>com.amz.factory.entity.MasStageMovement</beans:value>
+				<beans:value>com.amz.factory.entity.MapStageMovement</beans:value>
+				<beans:value>com.amz.factory.entity.MapStateDistrict</beans:value>
+				<beans:value>com.amz.factory.entity.MasAllocationMode</beans:value>
+				<beans:value>com.amz.factory.entity.MasBiddingTimeperiod</beans:value>
+				<beans:value>com.amz.factory.entity.MasCity</beans:value>
+				<beans:value>com.amz.factory.entity.MasCustomer</beans:value>
+				<beans:value>com.amz.factory.entity.MasDestination</beans:value>
+				<beans:value>com.amz.factory.entity.MasDestinationType</beans:value>
+				<beans:value>com.amz.factory.entity.MasDeviceMaster</beans:value>
+				<beans:value>com.amz.factory.entity.MasDeviceTypeMaster</beans:value>
+				<beans:value>com.amz.factory.entity.MasDeviceTypeQty</beans:value>
+				<beans:value>com.amz.factory.entity.MasDistrict</beans:value>
+				<beans:value>com.amz.factory.entity.MasFunction</beans:value>
+				<beans:value>com.amz.factory.entity.MasFunctiongroup</beans:value>
+				<beans:value>com.amz.factory.entity.MasLoader</beans:value>
+				<beans:value>com.amz.factory.entity.MasMovement</beans:value>
+				<beans:value>com.amz.factory.entity.MasMrpcommand</beans:value>
+				<beans:value>com.amz.factory.entity.MasOrdertype</beans:value>
+				<beans:value>com.amz.factory.entity.MasPacker</beans:value>
+				<beans:value>com.amz.factory.entity.MasPlant</beans:value>
+				<beans:value>com.amz.factory.entity.MasPrintingformat</beans:value>
+				<beans:value>com.amz.factory.entity.MasProduct</beans:value>
+				<beans:value>com.amz.factory.entity.MasProduction</beans:value>
+				<beans:value>com.amz.factory.entity.MasSalesoffice</beans:value>
+				<beans:value>com.amz.factory.entity.MasShift</beans:value>
+				<beans:value>com.amz.factory.entity.MasShipmenttype</beans:value>
+				<beans:value>com.amz.factory.entity.MasShippingtype</beans:value>
+				<beans:value>com.amz.factory.entity.MasStage</beans:value>
+				<beans:value>com.amz.factory.entity.MasStageMovement</beans:value>
+				<beans:value>com.amz.factory.entity.MasState</beans:value>
+				<beans:value>com.amz.factory.entity.MasTimedurType</beans:value>
+				<beans:value>com.amz.factory.entity.MasTransporter</beans:value>
+				<beans:value>com.amz.factory.entity.MasVehicle</beans:value>
+				<beans:value>com.amz.factory.entity.MasWeighbridge</beans:value>
+				<beans:value>com.amz.factory.entity.TransBustedDetail</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignAllocationDetail
+				</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignBiddingPrice
+				</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignClubbing</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignmentDetail</beans:value>
+				<beans:value>com.amz.factory.entity.TransLastprintedcommand</beans:value>
+				<beans:value>com.amz.factory.entity.TransSalesorder</beans:value>
+				<beans:value>com.amz.factory.entity.TransTripdetail</beans:value>
+				<beans:value>com.amz.factory.entity.UserDetail</beans:value>
+				<!-- <beans:value>com.amz.factory.entity.UserfunctionMaster</beans:value> -->
+				<beans:value>com.amz.factory.entity.UserroleMaster</beans:value>
+
+
+			</beans:list>
+		</beans:property>
+		<beans:property name="hibernateProperties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/" />
 		<beans:property name="suffix" value=".jsp" />
@@ -117,15 +134,17 @@
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 
-		 <!-- setting maximum upload size -->
+		<!-- setting maximum upload size -->
 		<beans:property name="maxUploadSize" value="1000000" />
 
 	</beans:bean>
- <context:component-scan base-package="com.amz" />  
-   
- <tx:annotation-driven transaction-manager="transactionManager"/>  
-   
- <beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">  
-  <beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />  
- </beans:bean>   
-  </beans:beans>  
+	<context:component-scan base-package="com.amz.factory" />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<beans:property name="sessionFactory"
+			ref="hibernate4AnnotatedSessionFactory" />
+	</beans:bean>
+</beans:beans>  
