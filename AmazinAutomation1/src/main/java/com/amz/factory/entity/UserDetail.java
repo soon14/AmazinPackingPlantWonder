@@ -5,139 +5,139 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
 
-
 /**
  * The persistent class for the user_details database table.
  * 
  */
 @Entity
-@Table(name="user_details")
-@NamedQuery(name="UserDetail.findAll", query="SELECT u FROM UserDetail u")
+@Table(name = "user_details")
+@NamedQuery(name = "UserDetail.findAll", query = "SELECT u FROM UserDetail u")
 public class UserDetail implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	@Column(name="added_by")
+	@Column(name = "added_by")
 	private String addedBy;
 
-	@Column(name="created_date")
+	@Column(name = "created_date")
 	private Timestamp createdDate;
 
-	@Column(name="is_active")
+	@Column(name = "is_active")
 	private String isActive;
 
-	@Column(name="last_updated")
+	@Column(name = "last_updated")
 	private Timestamp lastUpdated;
 
-	@Column(name="login_type")
-	private String loginType;
+	@Column(name = "multi_login")
+	private String multiLogin;
 
 	private String password;
 
-	@Column(name="updated_by")
+	@Column(name = "updated_by")
 	private String updatedBy;
 
-	@Column(name="user_fname")
+	@Column(name = "user_fname")
 	private String userFname;
 
-	@Column(name="user_lname")
+	@Column(name = "user_lname")
 	private String userLname;
 
-	@Column(name="user_mobile")
+	@Column(name = "user_mobile")
 	private String userMobile;
 
-	@Column(name="user_type")
+	@Column(name = "user_type")
 	private String userType;
 
 	private String username;
 
-	//bi-directional many-to-one association to DeliveryTimeWeightage
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to DeliveryTimeWeightage
+	@OneToMany(mappedBy = "userDetail1")
 	private List<DeliveryTimeWeightage> deliveryTimeWeightages1;
 
-	//bi-directional many-to-one association to DeliveryTimeWeightage
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to DeliveryTimeWeightage
+	@OneToMany(mappedBy = "userDetail2")
 	private List<DeliveryTimeWeightage> deliveryTimeWeightages2;
 
-	//bi-directional many-to-one association to DeliveryTimeWeightageHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to DeliveryTimeWeightageHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<DeliveryTimeWeightageHistory> deliveryTimeWeightageHistories;
 
-	//bi-directional many-to-one association to DistChnlWeightage
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to DistChnlWeightage
+	@OneToMany(mappedBy = "userDetail1")
 	private List<DistChnlWeightage> distChnlWeightages1;
 
-	//bi-directional many-to-one association to DistChnlWeightage
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to DistChnlWeightage
+	@OneToMany(mappedBy = "userDetail2")
 	private List<DistChnlWeightage> distChnlWeightages2;
 
-	//bi-directional many-to-one association to DistChnlWeightageHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to DistChnlWeightageHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<DistChnlWeightageHistory> distChnlWeightageHistories;
 
-	//bi-directional many-to-one association to DistanceWeightage
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to DistanceWeightage
+	@OneToMany(mappedBy = "userDetail1")
 	private List<DistanceWeightage> distanceWeightages1;
 
-	//bi-directional many-to-one association to DistanceWeightage
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to DistanceWeightage
+	@OneToMany(mappedBy = "userDetail2")
 	private List<DistanceWeightage> distanceWeightages2;
 
-	//bi-directional many-to-one association to DistanceWeightageHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to DistanceWeightageHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<DistanceWeightageHistory> distanceWeightageHistories;
 
-	//bi-directional many-to-one association to FleetTypeWeightage
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to FleetTypeWeightage
+	@OneToMany(mappedBy = "userDetail1")
 	private List<FleetTypeWeightage> fleetTypeWeightages1;
 
-	//bi-directional many-to-one association to FleetTypeWeightage
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to FleetTypeWeightage
+	@OneToMany(mappedBy = "userDetail2")
 	private List<FleetTypeWeightage> fleetTypeWeightages2;
 
-	//bi-directional many-to-one association to FleetTypeWeightageHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to FleetTypeWeightageHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<FleetTypeWeightageHistory> fleetTypeWeightageHistories;
 
-	//bi-directional many-to-one association to PriorityUpdation
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to PriorityUpdation
+	@OneToMany(mappedBy = "userDetail1")
 	private List<PriorityUpdation> priorityUpdations1;
 
-	//bi-directional many-to-one association to PriorityUpdation
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to PriorityUpdation
+	@OneToMany(mappedBy = "userDetail2")
 	private List<PriorityUpdation> priorityUpdations2;
 
-	//bi-directional many-to-one association to PriorityUpdationHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to PriorityUpdationHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<PriorityUpdationHistory> priorityUpdationHistories;
 
-	//bi-directional many-to-one association to ShippingConditionWeightage
-	@OneToMany(mappedBy="userDetail1")
+	// bi-directional many-to-one association to ShippingConditionWeightage
+	@OneToMany(mappedBy = "userDetail1")
 	private List<ShippingConditionWeightage> shippingConditionWeightages1;
 
-	//bi-directional many-to-one association to ShippingConditionWeightage
-	@OneToMany(mappedBy="userDetail2")
+	// bi-directional many-to-one association to ShippingConditionWeightage
+	@OneToMany(mappedBy = "userDetail2")
 	private List<ShippingConditionWeightage> shippingConditionWeightages2;
 
-	//bi-directional many-to-one association to ShippingConditionWeightageHistory
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to
+	// ShippingConditionWeightageHistory
+	@OneToMany(mappedBy = "userDetail")
 	private List<ShippingConditionWeightageHistory> shippingConditionWeightageHistories;
 
-	//bi-directional many-to-one association to UserroleMaster
+	// bi-directional many-to-one association to UserroleMaster
 	@ManyToOne
-	@JoinColumn(name="userrole_master_id")
+	@JoinColumn(name = "userrole_master_id")
 	private UserroleMaster userroleMaster;
 
-	//bi-directional many-to-one association to UserLoginDetail
-	@OneToMany(mappedBy="userDetail")
+	// bi-directional many-to-one association to UserLoginDetail
+	@OneToMany(mappedBy = "userDetail")
 	private List<UserLoginDetail> userLoginDetails;
 
-	//bi-directional many-to-one association to UserfunctionMaster
-//	@OneToMany(mappedBy="userDetail")
-//	private List<UserfunctionMaster> userfunctionMasters;
+	// bi-directional many-to-one association to UserfunctionMaster
+	// @OneToMany(mappedBy="userDetail")
+	// private List<UserfunctionMaster> userfunctionMasters;
 
 	public UserDetail() {
 	}
@@ -182,12 +182,12 @@ public class UserDetail implements Serializable {
 		this.lastUpdated = lastUpdated;
 	}
 
-	public String getLoginType() {
-		return this.loginType;
+	public String getMultiLogin() {
+		return this.multiLogin;
 	}
 
-	public void setLoginType(String loginType) {
-		this.loginType = loginType;
+	public void setMultiLogin(String multiLogin) {
+		this.multiLogin = multiLogin;
 	}
 
 	public String getPassword() {
@@ -298,14 +298,16 @@ public class UserDetail implements Serializable {
 		this.deliveryTimeWeightageHistories = deliveryTimeWeightageHistories;
 	}
 
-	public DeliveryTimeWeightageHistory addDeliveryTimeWeightageHistory(DeliveryTimeWeightageHistory deliveryTimeWeightageHistory) {
+	public DeliveryTimeWeightageHistory addDeliveryTimeWeightageHistory(
+			DeliveryTimeWeightageHistory deliveryTimeWeightageHistory) {
 		getDeliveryTimeWeightageHistories().add(deliveryTimeWeightageHistory);
 		deliveryTimeWeightageHistory.setUserDetail(this);
 
 		return deliveryTimeWeightageHistory;
 	}
 
-	public DeliveryTimeWeightageHistory removeDeliveryTimeWeightageHistory(DeliveryTimeWeightageHistory deliveryTimeWeightageHistory) {
+	public DeliveryTimeWeightageHistory removeDeliveryTimeWeightageHistory(
+			DeliveryTimeWeightageHistory deliveryTimeWeightageHistory) {
 		getDeliveryTimeWeightageHistories().remove(deliveryTimeWeightageHistory);
 		deliveryTimeWeightageHistory.setUserDetail(null);
 
@@ -503,7 +505,8 @@ public class UserDetail implements Serializable {
 		return fleetTypeWeightageHistory;
 	}
 
-	public FleetTypeWeightageHistory removeFleetTypeWeightageHistory(FleetTypeWeightageHistory fleetTypeWeightageHistory) {
+	public FleetTypeWeightageHistory removeFleetTypeWeightageHistory(
+			FleetTypeWeightageHistory fleetTypeWeightageHistory) {
 		getFleetTypeWeightageHistories().remove(fleetTypeWeightageHistory);
 		fleetTypeWeightageHistory.setUserDetail(null);
 
@@ -584,14 +587,16 @@ public class UserDetail implements Serializable {
 		this.shippingConditionWeightages1 = shippingConditionWeightages1;
 	}
 
-	public ShippingConditionWeightage addShippingConditionWeightages1(ShippingConditionWeightage shippingConditionWeightages1) {
+	public ShippingConditionWeightage addShippingConditionWeightages1(
+			ShippingConditionWeightage shippingConditionWeightages1) {
 		getShippingConditionWeightages1().add(shippingConditionWeightages1);
 		shippingConditionWeightages1.setUserDetail1(this);
 
 		return shippingConditionWeightages1;
 	}
 
-	public ShippingConditionWeightage removeShippingConditionWeightages1(ShippingConditionWeightage shippingConditionWeightages1) {
+	public ShippingConditionWeightage removeShippingConditionWeightages1(
+			ShippingConditionWeightage shippingConditionWeightages1) {
 		getShippingConditionWeightages1().remove(shippingConditionWeightages1);
 		shippingConditionWeightages1.setUserDetail1(null);
 
@@ -606,14 +611,16 @@ public class UserDetail implements Serializable {
 		this.shippingConditionWeightages2 = shippingConditionWeightages2;
 	}
 
-	public ShippingConditionWeightage addShippingConditionWeightages2(ShippingConditionWeightage shippingConditionWeightages2) {
+	public ShippingConditionWeightage addShippingConditionWeightages2(
+			ShippingConditionWeightage shippingConditionWeightages2) {
 		getShippingConditionWeightages2().add(shippingConditionWeightages2);
 		shippingConditionWeightages2.setUserDetail2(this);
 
 		return shippingConditionWeightages2;
 	}
 
-	public ShippingConditionWeightage removeShippingConditionWeightages2(ShippingConditionWeightage shippingConditionWeightages2) {
+	public ShippingConditionWeightage removeShippingConditionWeightages2(
+			ShippingConditionWeightage shippingConditionWeightages2) {
 		getShippingConditionWeightages2().remove(shippingConditionWeightages2);
 		shippingConditionWeightages2.setUserDetail2(null);
 
@@ -624,18 +631,21 @@ public class UserDetail implements Serializable {
 		return this.shippingConditionWeightageHistories;
 	}
 
-	public void setShippingConditionWeightageHistories(List<ShippingConditionWeightageHistory> shippingConditionWeightageHistories) {
+	public void setShippingConditionWeightageHistories(
+			List<ShippingConditionWeightageHistory> shippingConditionWeightageHistories) {
 		this.shippingConditionWeightageHistories = shippingConditionWeightageHistories;
 	}
 
-	public ShippingConditionWeightageHistory addShippingConditionWeightageHistory(ShippingConditionWeightageHistory shippingConditionWeightageHistory) {
+	public ShippingConditionWeightageHistory addShippingConditionWeightageHistory(
+			ShippingConditionWeightageHistory shippingConditionWeightageHistory) {
 		getShippingConditionWeightageHistories().add(shippingConditionWeightageHistory);
 		shippingConditionWeightageHistory.setUserDetail(this);
 
 		return shippingConditionWeightageHistory;
 	}
 
-	public ShippingConditionWeightageHistory removeShippingConditionWeightageHistory(ShippingConditionWeightageHistory shippingConditionWeightageHistory) {
+	public ShippingConditionWeightageHistory removeShippingConditionWeightageHistory(
+			ShippingConditionWeightageHistory shippingConditionWeightageHistory) {
 		getShippingConditionWeightageHistories().remove(shippingConditionWeightageHistory);
 		shippingConditionWeightageHistory.setUserDetail(null);
 
@@ -672,26 +682,29 @@ public class UserDetail implements Serializable {
 		return userLoginDetail;
 	}
 
-//	public List<UserfunctionMaster> getUserfunctionMasters() {
-//		return this.userfunctionMasters;
-//	}
-//
-//	public void setUserfunctionMasters(List<UserfunctionMaster> userfunctionMasters) {
-//		this.userfunctionMasters = userfunctionMasters;
-//	}
-//
-//	public UserfunctionMaster addUserfunctionMaster(UserfunctionMaster userfunctionMaster) {
-//		getUserfunctionMasters().add(userfunctionMaster);
-//		userfunctionMaster.setUserDetail(this);
-//
-//		return userfunctionMaster;
-//	}
-//
-//	public UserfunctionMaster removeUserfunctionMaster(UserfunctionMaster userfunctionMaster) {
-//		getUserfunctionMasters().remove(userfunctionMaster);
-//		userfunctionMaster.setUserDetail(null);
-//
-//		return userfunctionMaster;
-//	}
+	// public List<UserfunctionMaster> getUserfunctionMasters() {
+	// return this.userfunctionMasters;
+	// }
+	//
+	// public void setUserfunctionMasters(List<UserfunctionMaster>
+	// userfunctionMasters) {
+	// this.userfunctionMasters = userfunctionMasters;
+	// }
+	//
+	// public UserfunctionMaster addUserfunctionMaster(UserfunctionMaster
+	// userfunctionMaster) {
+	// getUserfunctionMasters().add(userfunctionMaster);
+	// userfunctionMaster.setUserDetail(this);
+	//
+	// return userfunctionMaster;
+	// }
+	//
+	// public UserfunctionMaster removeUserfunctionMaster(UserfunctionMaster
+	// userfunctionMaster) {
+	// getUserfunctionMasters().remove(userfunctionMaster);
+	// userfunctionMaster.setUserDetail(null);
+	//
+	// return userfunctionMaster;
+	// }
 
 }

@@ -8,14 +8,14 @@
 </head>
 <body onload="logout()">
 <script>
-function logout()
+<%-- function logout()
 {
 	<%
 	HttpSession sessionsa = request.getSession(false);
 	sessionsa.setAttribute("user", "");
 	%>
 	window.location.href="Login.jsp"
-}
+} --%>
 </script>
 </body>
 </html>
