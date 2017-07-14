@@ -63,7 +63,7 @@
 							<br>
 							<div>
 								<a href="http://amzbizsol.in/"><img
-									src="resources/img/amazin.png"></a>
+									src="resources/images/amazin.png"></a>
 								<p>© 2017 Amazin Automation. All Rights Reserved.</p>
 							</div>
 						</div>
