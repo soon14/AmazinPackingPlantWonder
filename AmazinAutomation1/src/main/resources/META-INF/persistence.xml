@@ -4,7 +4,15 @@
 		<class>com.amz.factory.entity.AdmSuper</class>
 		<class>com.amz.factory.entity.ConfigBidding</class>
 		<class>com.amz.factory.entity.ConfigSystemvar</class>
+		<class>com.amz.factory.entity.DeliveryTimeWeightage</class>
+		<class>com.amz.factory.entity.DeliveryTimeWeightageHistory</class>
+		<class>com.amz.factory.entity.DistChnlWeightage</class>
+		<class>com.amz.factory.entity.DistChnlWeightageHistory</class>
+		<class>com.amz.factory.entity.DistanceWeightage</class>
+		<class>com.amz.factory.entity.DistanceWeightageHistory</class>
 		<class>com.amz.factory.entity.DriverDetail</class>
+		<class>com.amz.factory.entity.FleetTypeWeightage</class>
+		<class>com.amz.factory.entity.FleetTypeWeightageHistory</class>
 		<class>com.amz.factory.entity.MapClubdestination</class>
 		<class>com.amz.factory.entity.MapDesTrptrQty</class>
 		<class>com.amz.factory.entity.MapDischargedSide</class>
@@ -47,6 +55,10 @@
 		<class>com.amz.factory.entity.MasTransporter</class>
 		<class>com.amz.factory.entity.MasVehicle</class>
 		<class>com.amz.factory.entity.MasWeighbridge</class>
+		<class>com.amz.factory.entity.PriorityUpdation</class>
+		<class>com.amz.factory.entity.PriorityUpdationHistory</class>
+		<class>com.amz.factory.entity.ShippingConditionWeightage</class>
+		<class>com.amz.factory.entity.ShippingConditionWeightageHistory</class>
 		<class>com.amz.factory.entity.TransBustedDetail</class>
 		<class>com.amz.factory.entity.TransConsignAllocationDetail</class>
 		<class>com.amz.factory.entity.TransConsignBiddingPrice</class>
@@ -56,7 +68,7 @@
 		<class>com.amz.factory.entity.TransSalesorder</class>
 		<class>com.amz.factory.entity.TransTripdetail</class>
 		<class>com.amz.factory.entity.UserDetail</class>
-		<class>com.amz.factory.entity.UserfunctionMaster</class>
+		<class>com.amz.factory.entity.UserLoginDetail</class>
 		<class>com.amz.factory.entity.UserroleMaster</class>
 	</persistence-unit>
 </persistence>

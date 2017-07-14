@@ -57,22 +57,26 @@
 				<beans:value>com.amz.factory.entity.MapClubdestination</beans:value>
 				<beans:value>com.amz.factory.entity.MapDesTrptrQty</beans:value>
 				<beans:value>com.amz.factory.entity.MapDischargedSide</beans:value>
-				<beans:value>com.amz.factory.entity.MapDischargedsideLoader</beans:value>
+				<beans:value>com.amz.factory.entity.MapDischargedsideLoader
+				</beans:value>
 				<beans:value>com.amz.factory.entity.MapDistrictCity</beans:value>
 				<beans:value>com.amz.factory.entity.MapLoaderCapacity</beans:value>
 				<beans:value>com.amz.factory.entity.MapLoaderdevice</beans:value>
-				<beans:value>com.amz.factory.entity.MapPackerAndProduct</beans:value>
+				<beans:value>com.amz.factory.entity.MapPackerAndProduct
+				</beans:value>
 				<beans:value>com.amz.factory.entity.MasStageMovement</beans:value>
 				<beans:value>com.amz.factory.entity.MapStageMovement</beans:value>
 				<beans:value>com.amz.factory.entity.MapStateDistrict</beans:value>
 				<beans:value>com.amz.factory.entity.MasAllocationMode</beans:value>
-				<beans:value>com.amz.factory.entity.MasBiddingTimeperiod</beans:value>
+				<beans:value>com.amz.factory.entity.MasBiddingTimeperiod
+				</beans:value>
 				<beans:value>com.amz.factory.entity.MasCity</beans:value>
 				<beans:value>com.amz.factory.entity.MasCustomer</beans:value>
 				<beans:value>com.amz.factory.entity.MasDestination</beans:value>
 				<beans:value>com.amz.factory.entity.MasDestinationType</beans:value>
 				<beans:value>com.amz.factory.entity.MasDeviceMaster</beans:value>
-				<beans:value>com.amz.factory.entity.MasDeviceTypeMaster</beans:value>
+				<beans:value>com.amz.factory.entity.MasDeviceTypeMaster
+				</beans:value>
 				<beans:value>com.amz.factory.entity.MasDeviceTypeQty</beans:value>
 				<beans:value>com.amz.factory.entity.MasDistrict</beans:value>
 				<beans:value>com.amz.factory.entity.MasFunction</beans:value>
@@ -102,16 +106,38 @@
 				</beans:value>
 				<beans:value>com.amz.factory.entity.TransConsignBiddingPrice
 				</beans:value>
-				<beans:value>com.amz.factory.entity.TransConsignClubbing</beans:value>
-				<beans:value>com.amz.factory.entity.TransConsignmentDetail</beans:value>
-				<beans:value>com.amz.factory.entity.TransLastprintedcommand</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignClubbing
+				</beans:value>
+				<beans:value>com.amz.factory.entity.TransConsignmentDetail
+				</beans:value>
+				<beans:value>com.amz.factory.entity.TransLastprintedcommand
+				</beans:value>
 				<beans:value>com.amz.factory.entity.TransSalesorder</beans:value>
 				<beans:value>com.amz.factory.entity.TransTripdetail</beans:value>
 				<beans:value>com.amz.factory.entity.UserDetail</beans:value>
 				<!-- <beans:value>com.amz.factory.entity.UserfunctionMaster</beans:value> -->
 				<beans:value>com.amz.factory.entity.UserroleMaster</beans:value>
-
-
+				<beans:value>com.amz.factory.entity.DeliveryTimeWeightage
+				</beans:value>
+				<beans:value>com.amz.factory.entity.DeliveryTimeWeightageHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.DistanceWeightage</beans:value>
+				<beans:value>com.amz.factory.entity.DistanceWeightageHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.DistChnlWeightage</beans:value>
+				<beans:value>com.amz.factory.entity.DistChnlWeightageHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.FleetTypeWeightage</beans:value>
+				<beans:value>com.amz.factory.entity.FleetTypeWeightageHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.PriorityUpdation</beans:value>
+				<beans:value>com.amz.factory.entity.PriorityUpdationHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.ShippingConditionWeightage
+				</beans:value>
+				<beans:value>com.amz.factory.entity.ShippingConditionWeightageHistory
+				</beans:value>
+				<beans:value>com.amz.factory.entity.UserLoginDetail</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">
